@@ -101,7 +101,7 @@ models:
                 value: none
               - label: Underline
                 value: underline
-              - label: '%20%u0335S%u0335'
+              - label: 
                 value: line-through
       - type: color
         name: primary
