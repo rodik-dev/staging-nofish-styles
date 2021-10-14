@@ -34,75 +34,37 @@ models:
         label: Text styles
       - name: color-palettes
         label: Color Palettes
+      - name: button-styles
+        label: Button Styles
     fields:
+      - type: enum
+        name: fontHeadlines
+        label: Font - Headlines & subtitles
+        group: text-styles
+        options: [Poppins, Frutiger]
       - type: object
         name: h1
         label: H1
         group: text-styles
-        fields:
-          - type: enum
-            name: style
-            label: Style
-            options:
-              - label: Bold
-                value: bold
-              - label: Normal
-                value: normal
-          - type: number
-            name: size
-            label: Font Size
-          - type: number
-            name: lineHeight
-            controlType: 'slider'
-            min: 0
-            max: 100
-            step: 2
-            unit: 'px'
-          - type: enum
-            name: decoration
-            label: Decoration
-            controlType: button-group
-            options:
-              - label: None
-                value: none
-              - label: Underline
-                value: underline
-              - label: Line-through
-                value: line-through
+        extends:
+          - ThemeStyleTextStyle
       - type: object
         name: h2
         label: H2
         group: text-styles
-        fields:
-          - type: enum
-            name: style
-            label: Style
-            options:
-              - label: Bold
-                value: bold
-              - label: Normal
-                value: normal
-          - type: number
-            name: size
-            label: Font Size
-          - type: number
-            name: lineHeight
-            controlType: 'slider'
-            min: 0
-            max: 100
-            step: 2
-            unit: 'px'
-          - type: enum
-            name: decoration
-            label: Decoration
-            controlType: button-group
-            options:
-              - label: None
-                value: none
-              - label: Underline
-                value: underline
-              - label: Linethrough
-                value: line-through
+        extends:
+          - ThemeStyleTextStyle
+      - type: object
+        name: h3
+        label: H3
+        group: text-styles
+        extends:
+          - ThemeStyleTextStyle
+      - type: enum
+        name: fontBody
+        label: Font - Body & Captions
+        group: text-styles
+        options: [ui-sans-serif, system-ui]
       - type: color
         name: primary
         label: Primary
@@ -127,3 +89,87 @@ models:
         name: info
         label: Info
         group: color-palettes
+      - type: object
+        name: textBodyLarge
+        label: Body large
+        group: text-styles
+        extends:
+          - ThemeStyleTextStyle
+      - type: object
+        name: textBodySmall
+        label: Body small
+        group: text-styles
+        extends:
+          - ThemeStyleTextStyle
+      - type: object
+        name: textCaptions
+        label: Captions
+        group: text-styles
+        extends:
+          - ThemeStyleTextStyle
+      - type: object
+        name: textButtonText
+        label: Button text
+        group: text-styles
+        extends:
+          - ThemeStyleTextStyle
+  ThemeStyleTextStyle:
+    type: object
+    label: Text Style
+    fields:
+      - type: number
+        name: size
+        label: Font Size
+        controlType: 'slider'
+        min: 0
+        max: 100
+        step: 2
+        unit: 'px'
+      - type: enum
+        name: style
+        label: Style
+        options:
+          - label: Bold
+            value: bold
+          - label: Normal
+            value: normal
+      - type: number
+        name: letterSpacing
+        label: Letter Spacing
+        controlType: 'slider'
+        min: 0
+        max: 100
+        step: 5
+        unit: '%'
+      - type: number
+        name: lineHeight
+        label: Line Height
+        controlType: 'slider'
+        min: 0
+        max: 100
+        step: 2
+        unit: 'px'
+      - type: enum
+        name: case
+        label: Case
+        controlType: button-group
+        options:
+          - label: default
+            value: none
+          - label: ag
+            value: lowercase
+          - label: Ag
+            value: capitalize
+          - label: AG
+            value: uppercase
+      - type: enum
+        name: decoration
+        label: Decoration
+        controlType: button-group
+        options:
+          - label: None
+            value: none
+          - label: Underline
+            value: underline
+          - label: Strikethrough
+            value: line-through
