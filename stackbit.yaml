@@ -101,7 +101,7 @@ models:
                 value: none
               - label: Underline
                 value: underline
-              - label: 
+              - label: Linethrough
                 value: line-through
       - type: color
         name: primary
