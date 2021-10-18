@@ -2,6 +2,9 @@
 title: Home
 layout: PageLayout
 sections:
+  - type: ExampleSection
+    logos: []
+    title: My Title
   - type: HeroSection
     elementId: homepage-hero-1
     variant: variant-a
