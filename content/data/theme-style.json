@@ -13,12 +13,12 @@
         "decoration": "none"
     },
     "colors": {
-"primary": "#28aaff",
-    "secondary": "#e3cf84",
-    "base": "#282f36",
-    "complimentary-1": "#e9f6ff",
-    "complimentary-2": "#fffde2",
-    "info": "#ffa928"
+        "primary": "#28aaff",
+        "secondary": "#e3cf84",
+        "base": "#282f36",
+        "complimentary-1": "#e9f6ff",
+        "complimentary-2": "#fffde2",
+        "info": "#ffa928"
     }
     
 }
