@@ -14,7 +14,8 @@ module.exports = {
     theme: {
         extend: {
             ...themeStyle
-
+            primary: themeStyle.primary,
+            secondary: themeStyle.secondary
             colors: {
                 primary: themeStyle.primary,
                 secondary: themeStyle.secondary,
